@@ -1,42 +1,68 @@
-const foodUrl = "https://foodish-api.herokuapp.com/api/"
-const foodMenu = document.getElementById('food-list');
+const randomFoodUrl = "https://foodish-api.herokuapp.com/api/"
+// Food Urls
+const baseUrl = "https://foodish-api.herokuapp.com/images/"
 
-const NUMBER_OF_IMAGES = 5
+const biryaniUrl = 'biryani/biryani' 
+const burgerUrl = 'burger/burger'
+const butter_chickenUrl = 'butter-chicken/butter-chicken'
+const dessertUrl = 'dessert/dessert'
+const dosaUrl = 'dosa/dosa'
+const idlyUrl = 'idly/idly'
+const pastaUrl = 'pasta/pasta'
+const pizzaUrl = 'pizza/pizza'
+const riceUrl = 'rice/rice'
+const samosaUrl = 'samosa/samosa'
+
+
+const randomNum = (Math.floor(Math.random()* 20) + 1)
+const jpg = '.jpg'
+
+
+
+const foodMenu = document.getElementById('food-list');
+const bottomMenu = document.getElementById('bottom-list');
+
 
 document.addEventListener('DOMContentLoaded' , fetchImage)
 
 function fetchImage () {
-    for (let i = 0; i < 3; i++) {
-        fetch(foodUrl)
+    for (let i = 0; i < 5; i++) {
+        fetch(randomFoodUrl)
         .then(resp => resp.json())
-        .then(foodImg => appendToArray(foodImg))
+        .then(foodImg => appendToFoodMenu(foodImg))
     }
-    
-}
-
-// Get different images from JSON object
-// Assign images to array/Object
-
-function appendToArray (foodObj) {
-    
 }
 
 
-// function appendToFoodMenu (food) {
-//     let i = 0;
-//     while (i < 3) {
-//         const imgOfFood = document.createElement('img');
-//         imgOfFood.src = food.image;
+function appendToFoodMenu (food) {
+        const imgOfFood = document.createElement('img');
+        imgOfFood.src = food.image;
+        foodMenu.append(imgOfFood);
+        imgOfFood.addEventListener('click', (e) => {
+            e.preventDefault()
 
-//         foodMenu.append(imgOfFood);
+        })
+    }
 
-//         imgOfFood.addEventListener('click', (e) => {
-//             e.preventDefault()
 
-//         })
+function appendToSideMenu () {
+    const arrayOfFoodNames = [
+        biryaniUrl, 
+        burgerUrl, 
+        butter_chickenUrl, 
+        dessertUrl, 
+        dosaUrl, 
+        idlyUrl, 
+        pastaUrl, 
+        pizzaUrl,
+        riceUrl, 
+        samosaUrl,
+    ]
+    for (const foodNames of arrayOfFoodNames) {
+        const bottomFood = document.createElement('img');
+        bottomFood.src = (baseUrl + foodNames + randomNum + jpg)
+        bottomMenu.append(bottomFood)
+    }
+}
 
-//         i += 1
-
-//     }
-
-// }
+appendToSideMenu()

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foodie Finds</title>
     <script defer type="text/javascript" src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -14,12 +15,14 @@
     <div id="food-list">
         <!-- Food Images Here -->
       </div>
-    
+    <div id="bottom-list"></div>
       <!-- Food Details -->
       <div id="food-detail">
         <img class="detail-image" src="./src/noncopyright.png" alt="Insert Name Here" />
-        <h2 class="name">Insert Name Here</h2>
-        <h3 class="restaurant">Insert Restaurant Here</h3>
+        <h3>Name:</h3>
+        <p id='name-display'>
+          Insert name here
+        </p>
       </div>
     
       <h3>Rating:</h3>
@@ -31,20 +34,16 @@
         Insert comment here
       </p>
     
-      <!-- New Ramen Form -->
-      <form id="new-ramen">
-        <h4>Add New Food</h4>
+      <!-- New Food Form -->
+      <form id="new-food">
+        <h2>Add New Food Comment</h2>
         <label for="name">Name: </label>
         <input type="text" name="name" id="new-name" />
-        <label for="restaurant">Restaurant: </label>
-        <input type="text" name="restaurant" id="new-restaurant" />
-        <label for="image">Image: </label>
-        <input type="text" name="image" id="new-image" />
         <label for="rating">Rating: </label>
         <input type="number" name="rating" id="new-rating" />
         <label for="new-comment">Comment: </label>
         <textarea name="new-comment" id="new-comment"></textarea>
-        <input type="submit" value="Create" />
+        <button id="post-btn">Post</button>
       </form>
 </body>
 </html>
