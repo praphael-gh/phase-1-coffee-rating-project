@@ -8,9 +8,8 @@ function fetchImage () {
     for (let i = 0; i < 3; i++) {
         fetch(foodUrl)
         .then(resp => resp.json())
-        .then(foodImg => appendToFoodMenu(foodImg))
+        .then(data => appendToFoodMenu(data))
     }
-    
 }
 
 
@@ -22,4 +21,5 @@ function appendToFoodMenu (food) {
             e.preventDefault()
         })
     }
+
 
