@@ -22,7 +22,6 @@ const jpg = '.jpg'
 const foodMenu = document.getElementById('food-list');
 const bottomMenu = document.getElementById('bottom-list');
 
-
 document.addEventListener('DOMContentLoaded' , fetchImage)
 
 function fetchImage () {
@@ -34,35 +33,14 @@ function fetchImage () {
 }
 
 
+    
+}
+
 function appendToFoodMenu (food) {
         const imgOfFood = document.createElement('img');
         imgOfFood.src = food.image;
         foodMenu.append(imgOfFood);
         imgOfFood.addEventListener('click', (e) => {
             e.preventDefault()
-
         })
     }
-
-
-function appendToSideMenu () {
-    const arrayOfFoodNames = [
-        biryaniUrl, 
-        burgerUrl, 
-        butter_chickenUrl, 
-        dessertUrl, 
-        dosaUrl, 
-        idlyUrl, 
-        pastaUrl, 
-        pizzaUrl,
-        riceUrl, 
-        samosaUrl,
-    ]
-    for (const foodNames of arrayOfFoodNames) {
-        const bottomFood = document.createElement('img');
-        bottomFood.src = (baseUrl + foodNames + randomNum + jpg)
-        bottomMenu.append(bottomFood)
-    }
-}
-
-appendToSideMenu()
