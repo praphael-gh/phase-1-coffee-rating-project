@@ -9,13 +9,14 @@ function fetchImage () {
         .then(resp => resp.json())
         .then(foodImg => appendToFoodMenu(foodImg))
     }
+    
 }
 
 function appendToFoodMenu (food) {
-    const imgOfFood = document.createElement('img');
-    imgOfFood.src = food.image;
-    imgOfFood.addEventListener('click', (e) => {
-        e.preventDefault()
-    }) 
-    foodMenu.append(imgOfFood);
-}
+        const imgOfFood = document.createElement('img');
+        imgOfFood.src = food.image;
+        foodMenu.append(imgOfFood);
+        imgOfFood.addEventListener('click', (e) => {
+            e.preventDefault()
+        })
+    }
