@@ -1,0 +1,9 @@
+#food-list img{
+    display: 0 1 auto;
+    height: 150px;
+}
+
+#bottom-list img{
+    display: flex;
+    height: 150px;
+}
