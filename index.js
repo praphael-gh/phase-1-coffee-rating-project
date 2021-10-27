@@ -40,7 +40,7 @@ function appendToFoodMenu (food) {
         foodMenu.append(imgOfFood);
         imgOfFood.addEventListener('click', (e) => {
             e.preventDefault()
-
+            featureInCenter(food)
         })
     }
 
@@ -66,3 +66,32 @@ function appendToSideMenu () {
 }
 
 appendToSideMenu()
+
+
+function submitFoodForm (event) {
+    event.preventDefault();
+    const userName = document.querySelector('input#new-name').value
+    const foodAppearanceRating = document.querySelector('input#new-rating').value
+    const foodComment = document.querySelector('#new-comment').value
+
+    const emptyName = document.querySelector('#display-name')
+    const emptyRating = document.querySelector('#rating-display')
+    const emptyComment = document.querySelector('#comment-display')
+
+    emptyName.innerText(userName)
+    emptyRating.innerText(foodAppearanceRating)
+    emptyComment.innerText(foodComment)
+}
+
+
+const form = document.querySelector('#post-btn');
+form.addEventListener('submit', submitFoodForm)
+
+
+function featureInCenter (food) {
+    const foodDetail = document.querySelector('#food-detail')
+    console.log(foodDetail.querySelector('.detail-image').src = food.image)
+}
+
+// function addDetailsToFeatured () {
+// }
