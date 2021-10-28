@@ -1,9 +1,19 @@
 #food-list img{
     display: 0 1 auto;
     height: 150px;
+    
 }
 
 #bottom-list img{
+    padding: 5px;
     display: flex;
+    height: 150px;
+    width: auto;
+    content: bottom;
+    position: fixed;
+    bottom: 0;
+}
+
+.detail-image {
     height: 150px;
 }
