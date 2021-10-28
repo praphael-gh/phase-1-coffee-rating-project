@@ -66,11 +66,9 @@ function appendToFoodMenu(food) {
 function submitFoodForm (event) {
     event.preventDefault();
     const userName = document.querySelector('#new-name').value
-    // console.log(userName)
     const foodAppearanceRating = parseInt(document.querySelector('input#new-rating').value)
-    // console.log(foodAppearanceRating)
     const foodComment = document.querySelector('#new-comment').value
-    // console.log(foodComment)
+
         
     const emptyName = document.querySelector('#name-display')
     const emptyRating = document.querySelector('#rating-display')
@@ -88,5 +86,27 @@ button.addEventListener('click', submitFoodForm)
 
 function featureInCenter (food) {
     const foodDetail = document.querySelector('#food-detail')
-    console.log(foodDetail.querySelector('.detail-image').src = food.image)
+    foodDetail.querySelector('.detail-image').src = food.image
 }
+
+
+function resetButton (event) {
+    event.preventDefault();
+    // const defaultName = document.querySelector('#new-name').value
+    // const defaultRating = parseInt(document.querySelector('input#new-rating').value)
+    // const defaultComment = document.querySelector('#new-comment').value
+        
+    const emptyName = document.querySelector('#name-display')
+    const emptyRating = document.querySelector('#rating-display')
+    const emptyComment = document.querySelector('#comment-display')
+
+    emptyName.innerText = "Insert Name Here"
+    emptyRating.innerText = "Insert rating here"
+    emptyComment.innerText = "Insert comment here"
+
+}
+
+const resetForm = document.querySelector('#reset-form-bttn')
+resetForm.addEventListener('click', resetButton )
+
+

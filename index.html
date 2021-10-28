@@ -20,32 +20,28 @@
       <div id="food-detail">
         <img class="detail-image" src="./src/noncopyright.png" alt="Insert Name Here" />
         <h3>Name:</h3>
-        <p id='name-display'>
-          Insert name here
-        </p>
+          <p id='name-display'>Insert name here</p>
+        <h3>Rating:</h3>
+          <p>
+            <span id='rating-display'>Insert rating here</span> / 10
+          </p>
+        <h3>Comment:</h3>
+          <p id='comment-display'>Insert comment here</p>
+          <button id="reset-form-bttn" type="reset">Reset Form</button>
       </div>
-    
-      <h3>Rating:</h3>
-      <p>
-        <span id='rating-display'>Insert rating here</span> / 10
-      </p>
-      <h3>Comment:</h3>
-      <p id='comment-display'>
-        Insert comment here
-      </p>
+      
     
       <!-- New Food Form -->
       <form id="new-food">
         <h2>Add New Food Comment</h2>
         <label for="name">Name: </label>
         <input type="text" name="name" id="new-name" />
-        <label for="image">Image: </label>
-        <input type="text" name="image" id="new-image" />
         <label for="rating">Rating: </label>
         <input type="number" name="rating" id="new-rating" />
         <label for="new-comment">Comment: </label>
         <textarea name="new-comment" id="new-comment"></textarea>
         <button id="post-bttn" type="button">Post</button>
+        <button id="reset-bttn" type="reset">Reset</button>
       </form>
 </body>
 </html>
