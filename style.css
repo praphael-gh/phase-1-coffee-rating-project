@@ -1,19 +1,23 @@
 #food-list img{
-    display: 0 1 auto;
+    display: 50 ;
     height: 150px;
-    
+    margin-right: 0.5rem;
 }
 
-#bottom-list img{
-    padding: 5px;
+#new-food {
+    color:blue;
+    border: 1px solid yellow;
+    background-color: pink;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+body {
+    padding: 1rem;
+    text-align: center;
+    background-color: burlywood;
     display: flex;
-    height: 150px;
-    width: auto;
-    content: bottom;
-    position: fixed;
-    bottom: 0;
-}
-
-.detail-image {
-    height: 150px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

@@ -1,41 +1,3 @@
-
-// Food Urls
-    // const baseUrl = "https://foodish-api.herokuapp.com/images/"
-
-    // const biryaniUrl = 'biryani/biryani' 
-    // const burgerUrl = 'burger/burger'
-    // const butter_chickenUrl = 'butter-chicken/butter-chicken'
-    // const dessertUrl = 'dessert/dessert'
-    // const dosaUrl = 'dosa/dosa'
-    // const idlyUrl = 'idly/idly'
-    // const pastaUrl = 'pasta/pasta'
-    // const pizzaUrl = 'pizza/pizza'
-    // const riceUrl = 'rice/rice'
-    // const samosaUrl = 'samosa/samosa'
-
-    // const randomNum = (Math.floor(Math.random()* 20) + 1)
-    // const jpg = '.jpg'
-    // const bottomMenu = document.getElementById('bottom-list');
-    // Side Menu
-        // function appendToSideMenu () {
-        //     const arrayOfFoodNames = [
-        //         biryaniUrl, 
-        //         burgerUrl, 
-        //         butter_chickenUrl, 
-        //         dessertUrl, 
-        //         dosaUrl, 
-        //         idlyUrl, 
-        //         pastaUrl, 
-        //         pizzaUrl,
-        //         riceUrl, 
-        //         samosaUrl,
-        //     ]
-        //     for (const foodNames of arrayOfFoodNames) {
-        //         const bottomFood = document.createElement('img');
-        //         bottomFood.src = (baseUrl + foodNames + randomNum + jpg)
-        //         bottomMenu.append(bottomFood)
-        //     }
-        // }
 const randomFoodUrl = "https://foodish-api.herokuapp.com/api/"
 const foodMenu = document.getElementById('food-list');
 
@@ -49,7 +11,6 @@ function fetchImage() {
     }
 }
 
-
 function appendToFoodMenu(food) {
         const imgOfFood = document.createElement('img');
         imgOfFood.src = food.image;
@@ -59,8 +20,6 @@ function appendToFoodMenu(food) {
             featureInCenter(food)
         })
     }
-
-
 
     
 function submitFoodForm (event) {
@@ -92,9 +51,6 @@ function featureInCenter (food) {
 
 function resetButton (event) {
     event.preventDefault();
-    // const defaultName = document.querySelector('#new-name').value
-    // const defaultRating = parseInt(document.querySelector('input#new-rating').value)
-    // const defaultComment = document.querySelector('#new-comment').value
         
     const emptyName = document.querySelector('#name-display')
     const emptyRating = document.querySelector('#rating-display')
